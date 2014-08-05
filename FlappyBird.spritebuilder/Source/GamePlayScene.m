@@ -6,9 +6,12 @@
 
 - (void)initialize
 {
+    //calling a method [object method:parameter]
     character = (Character*)[CCBReader load:@"Character"];
     [physicsNode addChild:character];
-    //calling a method [object method:parameter]
+    
+    //adds an obstacle
+    [self addObstacle];
 }
 
 -(void)update:(CCTime)delta
@@ -21,5 +24,6 @@
     //this will get called every time the player touches the screen
     [character flap];
 }
+
 
 @end
